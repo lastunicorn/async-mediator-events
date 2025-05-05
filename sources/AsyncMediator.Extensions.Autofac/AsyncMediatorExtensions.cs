@@ -19,7 +19,7 @@ public static class AsyncMediatorExtensions
             return type => localContext.Resolve(type);
         });
 
-        containerBuilder.RegisterType<Mediator>().As<IMediator>().SingleInstance();
+        containerBuilder.RegisterType<Mediator>().As<IMediator>().InstancePerRequest();
 
         containerBuilder.RegisterAssemblyTypes(assembly).AsClosedTypesOf(typeof(IEventHandler<>));
         containerBuilder.RegisterAssemblyTypes(assembly).AsClosedTypesOf(typeof(ICommandHandler<>));

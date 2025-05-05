@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediator.Extensions.De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.Infrastructure.RequestBusModel", "AsyncMediatorEvents.Infrastructure.RequestBusModel\AsyncMediatorEvents.Infrastructure.RequestBusModel.csproj", "{C7069135-952A-4594-B85B-56900EBC5B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.WebApi.Presentation", "AsyncMediatorEvents.WebApi.Presentation\AsyncMediatorEvents.WebApi.Presentation.csproj", "{270FB960-A334-45B6-AED4-9F7B03523B15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{C7069135-952A-4594-B85B-56900EBC5B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7069135-952A-4594-B85B-56900EBC5B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7069135-952A-4594-B85B-56900EBC5B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{270FB960-A334-45B6-AED4-9F7B03523B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{270FB960-A334-45B6-AED4-9F7B03523B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{270FB960-A334-45B6-AED4-9F7B03523B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{270FB960-A334-45B6-AED4-9F7B03523B15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

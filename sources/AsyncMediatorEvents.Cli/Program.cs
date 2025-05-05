@@ -1,9 +1,9 @@
 ﻿using AsyncMediator;
-using AsyncMediatorEvents.Business.UseCases.Demo;
 using AsyncMediatorEvents.Cli.ConsoleCommands;
 using AsyncMediator.Extensions.Autofac;
 using Autofac;
 using System.Reflection;
+using AsyncMediatorEvents.Application.UseCases.Demo;
 
 namespace AsyncMediatorEvents.Cli;
 

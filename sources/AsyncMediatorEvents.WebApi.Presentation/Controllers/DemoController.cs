@@ -1,8 +1,8 @@
 ﻿using AsyncMediator;
-using AsyncMediatorEvents.Business.UseCases.Demo;
+using AsyncMediatorEvents.Application.UseCases.Demo;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AsyncMediatorEvents.WebApi.Controllers;
+namespace AsyncMediatorEvents.WebApi.Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

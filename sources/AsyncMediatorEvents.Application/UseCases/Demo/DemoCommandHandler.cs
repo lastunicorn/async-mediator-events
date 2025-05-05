@@ -1,8 +1,8 @@
 ﻿using AsyncMediator;
-using AsyncMediatorEvents.Business.Events.Demo;
+using AsyncMediatorEvents.Application.Events.Demo;
 using System.Diagnostics;
 
-namespace AsyncMediatorEvents.Business.UseCases.Demo;
+namespace AsyncMediatorEvents.Application.UseCases.Demo;
 
 public class DemoCommandHandler : ICommandHandler<DemoCommand>
 {

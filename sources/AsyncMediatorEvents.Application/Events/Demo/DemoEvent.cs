@@ -1,6 +1,6 @@
 ﻿using AsyncMediator;
 
-namespace AsyncMediatorEvents.Business.Events.Demo;
+namespace AsyncMediatorEvents.Application.Events.Demo;
 
 public class DemoEvent : IDomainEvent
 {

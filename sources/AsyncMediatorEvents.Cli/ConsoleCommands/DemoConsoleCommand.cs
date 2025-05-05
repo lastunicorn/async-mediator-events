@@ -1,5 +1,5 @@
 ﻿using AsyncMediator;
-using AsyncMediatorEvents.Business.UseCases.Demo;
+using AsyncMediatorEvents.Application.UseCases.Demo;
 
 namespace AsyncMediatorEvents.Cli.ConsoleCommands;
 

@@ -1,7 +1,7 @@
 ﻿using AsyncMediator;
 using System.Diagnostics;
 
-namespace AsyncMediatorEvents.Business.Events.Demo;
+namespace AsyncMediatorEvents.Application.Events.Demo;
 
 public class DemoEventHandler : IEventHandler<DemoEvent>
 {

@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" />
     <ProjectReference Include="..\AsyncMediator.Extensions.DependencyInjection\AsyncMediator.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\AsyncMediatorEvents.WebApi.Presentation\AsyncMediatorEvents.WebApi.Presentation.csproj" />
   </ItemGroup>
 
 </Project>

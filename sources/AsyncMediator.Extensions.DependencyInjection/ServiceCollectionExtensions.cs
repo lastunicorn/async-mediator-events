@@ -19,7 +19,7 @@ public static class ServiceCollectionExtensions
             return type => context.GetService(type);
         });
 
-        containerBuilder.AddSingleton<IMediator, Mediator>();
+        containerBuilder.AddScoped<IMediator, Mediator>();
 
         containerBuilder.RegisterAssemblyTypes(typeof(IEventHandler<>), assembly);
         containerBuilder.RegisterAssemblyTypes(typeof(ICommandHandler<>), assembly);

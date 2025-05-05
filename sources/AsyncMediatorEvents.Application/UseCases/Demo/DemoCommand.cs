@@ -1,6 +1,6 @@
 ﻿using AsyncMediator;
 
-namespace AsyncMediatorEvents.Business.UseCases.Demo;
+namespace AsyncMediatorEvents.Application.UseCases.Demo;
 
 public class DemoCommand : ICommand
 {
