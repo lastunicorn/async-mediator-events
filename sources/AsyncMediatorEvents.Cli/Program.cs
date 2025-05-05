@@ -1,9 +1,6 @@
 ﻿using AsyncMediator;
-using AsyncMediatorEvents.Cli.ConsoleCommands;
-using AsyncMediator.Extensions.Autofac;
 using Autofac;
-using System.Reflection;
-using AsyncMediatorEvents.Application.UseCases.Demo;
+using AsyncMediatorEvents.Cli.Presentation.ConsoleCommands;
 
 namespace AsyncMediatorEvents.Cli;
 
@@ -12,17 +9,13 @@ internal static class Program
     private static async Task Main(string[] args)
     {
         IContainer container = SetupContainer();
-
         await ExecuteDemoUseCase(container);
     }
 
     private static IContainer SetupContainer()
     {
         ContainerBuilder containerBuilder = new();
-
-        Assembly useCaseAssembly = typeof(DemoCommand).Assembly;
-        containerBuilder.RegisterAsyncMediator(useCaseAssembly);
-
+        Setup.SetupContainer(containerBuilder);
         return containerBuilder.Build();
     }
 

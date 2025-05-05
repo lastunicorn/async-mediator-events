@@ -1,9 +1,9 @@
 ﻿using AsyncMediator;
 using AsyncMediatorEvents.Application.UseCases.Demo;
 
-namespace AsyncMediatorEvents.Cli.ConsoleCommands;
+namespace AsyncMediatorEvents.Cli.Presentation.ConsoleCommands;
 
-internal class DemoConsoleCommand
+public class DemoConsoleCommand
 {
     private readonly IMediator mediator;
 

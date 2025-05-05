@@ -7,7 +7,7 @@ public class DemoEventHandler : IEventHandler<DemoEvent>
 {
     public Task Handle(DemoEvent @event)
     {
-        Debug.WriteLine($"[DemoCommandHandler] executing");
+        Debug.WriteLine($"[DemoEventHandler] executing");
 
         try
         {
@@ -17,7 +17,7 @@ public class DemoEventHandler : IEventHandler<DemoEvent>
         }
         finally
         {
-            Debug.WriteLine($"[DemoCommandHandler] finished");
+            Debug.WriteLine($"[DemoEventHandler] finished");
         }
     }
 
