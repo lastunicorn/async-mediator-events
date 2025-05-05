@@ -1,5 +1,4 @@
-﻿using AsyncMediator;
-using Autofac;
+﻿using Autofac;
 using System.Reflection;
 
 namespace AsyncMediator.Extensions.Autofac;

@@ -1,4 +1,3 @@
-
 using AsyncMediator;
 using AsyncMediator.Extensions.DependencyInjection;
 using AsyncMediatorEvents.Business.Events.Demo;
@@ -22,9 +21,6 @@ namespace AsyncMediatorEvents.WebApi
 
             Assembly useCaseAssembly = typeof(DemoCommand).Assembly;
             builder.Services.AddAsyncMediator(useCaseAssembly);
-
-            builder.Services.AddTransient<ICommandHandler<DemoCommand>, DemoCommandHandler>();
-            builder.Services.AddTransient<IEventHandler<DemoEvent>, DemoEventHandler>();
 
             WebApplication app = builder.Build();
 

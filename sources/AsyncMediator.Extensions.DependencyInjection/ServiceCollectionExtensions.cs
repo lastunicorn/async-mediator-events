@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.IO;
 using System.Reflection;
+using System.Security.AccessControl;
 
 namespace AsyncMediator.Extensions.DependencyInjection;
 
@@ -29,32 +31,21 @@ public static class ServiceCollectionExtensions
 
     public static IServiceCollection RegisterAssemblyTypes(this IServiceCollection services, Type serviceType, params Assembly[] assemblies)
     {
-        IEnumerable<Type> types = assemblies
+        IEnumerable<TypeInheritanceAnalysis> analyses = assemblies
             .SelectMany(x => x.GetTypes())
-            .Where(x => x.IsClass && !x.IsAbstract && x.IsAssignableFrom2(serviceType));
+            .Where(x => x.IsClass && !x.IsAbstract)
+            .Select(x => new TypeInheritanceAnalysis(x, serviceType))
+            .Where(x => x.InheritedTypes.Count > 0);
 
-        foreach (Type typeFromAssembly in types)
-            services.AddTransient(serviceType, typeFromAssembly);
+        foreach (TypeInheritanceAnalysis analysis in analyses)
+        {
+            foreach (Type type in analysis.InheritedTypes)
+            {
+                ServiceDescriptor serviceDescriptor = new(type, analysis.DerivedType, ServiceLifetime.Transient);
+                services.Add(serviceDescriptor);
+            }
+        }
 
         return services;
-    }
-
-    private static bool IsAssignableFrom2(this Type type, Type baseType)
-    {
-        if (type == null)
-            throw new ArgumentNullException(nameof(type));
-
-        if (baseType == null)
-            throw new ArgumentNullException(nameof(baseType));
-
-        if (baseType.IsGenericType)
-        {
-            Type genericBaseType = baseType.GetGenericTypeDefinition();
-            return genericBaseType.IsAssignableFrom(type);
-        }
-        else
-        {
-            return baseType.IsAssignableFrom(type);
-        }
     }
 }
