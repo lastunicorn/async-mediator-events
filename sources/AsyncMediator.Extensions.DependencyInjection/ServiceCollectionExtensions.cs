@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System.IO;
 using System.Reflection;
-using System.Security.AccessControl;
 
 namespace AsyncMediator.Extensions.DependencyInjection;
 
@@ -21,15 +19,15 @@ public static class ServiceCollectionExtensions
 
         containerBuilder.AddScoped<IMediator, Mediator>();
 
-        containerBuilder.RegisterAssemblyTypes(typeof(IEventHandler<>), assembly);
-        containerBuilder.RegisterAssemblyTypes(typeof(ICommandHandler<>), assembly);
-        containerBuilder.RegisterAssemblyTypes(typeof(IQuery<,>), assembly);
-        containerBuilder.RegisterAssemblyTypes(typeof(ILookupQuery<>), assembly);
+        containerBuilder.AddAllTypes(typeof(IEventHandler<>), assembly);
+        containerBuilder.AddAllTypes(typeof(ICommandHandler<>), assembly);
+        containerBuilder.AddAllTypes(typeof(IQuery<,>), assembly);
+        containerBuilder.AddAllTypes(typeof(ILookupQuery<>), assembly);
 
         return containerBuilder;
     }
 
-    public static IServiceCollection RegisterAssemblyTypes(this IServiceCollection services, Type serviceType, params Assembly[] assemblies)
+    private static IServiceCollection AddAllTypes(this IServiceCollection services, Type serviceType, params Assembly[] assemblies)
     {
         IEnumerable<TypeInheritanceAnalysis> analyses = assemblies
             .SelectMany(x => x.GetTypes())

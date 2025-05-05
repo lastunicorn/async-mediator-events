@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace AsyncMediatorEvents.Application.UseCases.Demo;
 
-public class DemoCommandHandler : ICommandHandler<DemoCommand>
+internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 {
     private readonly IMediator mediator;
 

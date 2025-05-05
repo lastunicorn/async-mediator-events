@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace AsyncMediatorEvents.Application.Events.Demo;
 
-public class DemoEventHandler : IEventHandler<DemoEvent>
+internal class DemoEventHandler : IEventHandler<DemoEvent>
 {
     public Task Handle(DemoEvent @event)
     {
