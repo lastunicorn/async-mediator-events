@@ -10,7 +10,7 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 
     public DemoCommandHandler(IMediator mediator)
     {
-        this.mediator = mediator;
+        this.mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
     }
 
     public Task<ICommandWorkflowResult> Handle(DemoCommand command)
@@ -49,9 +49,4 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 
         mediator.DeferEvent(@event);
     }
-}
-
-public class DemoResponse
-{
-    public string Message { get; set; }
 }
