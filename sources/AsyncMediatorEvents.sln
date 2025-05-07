@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediator.Extensions.DependencyInjection", "AsyncMediator.Extensions.DependencyInjection\AsyncMediator.Extensions.DependencyInjection.csproj", "{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.Infrastructure.RequestBusModel", "AsyncMediatorEvents.Infrastructure.RequestBusModel\AsyncMediatorEvents.Infrastructure.RequestBusModel.csproj", "{C7069135-952A-4594-B85B-56900EBC5B2C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.WebApi.Presentation", "AsyncMediatorEvents.WebApi.Presentation\AsyncMediatorEvents.WebApi.Presentation.csproj", "{270FB960-A334-45B6-AED4-9F7B03523B15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.Cli.Presentation", "AsyncMediatorEvents.Cli.Presentation\AsyncMediatorEvents.Cli.Presentation.csproj", "{7CFA3B28-537A-4A23-87D9-498B5EBBF4CD}"
@@ -47,10 +45,6 @@ Global
 		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7069135-952A-4594-B85B-56900EBC5B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7069135-952A-4594-B85B-56900EBC5B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7069135-952A-4594-B85B-56900EBC5B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7069135-952A-4594-B85B-56900EBC5B2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{270FB960-A334-45B6-AED4-9F7B03523B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{270FB960-A334-45B6-AED4-9F7B03523B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{270FB960-A334-45B6-AED4-9F7B03523B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -66,7 +60,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{C7069135-952A-4594-B85B-56900EBC5B2C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB22CA3A-3542-456B-8509-BE27625A6CC6}
