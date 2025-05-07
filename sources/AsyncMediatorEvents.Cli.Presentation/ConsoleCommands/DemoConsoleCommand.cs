@@ -1,15 +1,16 @@
 ﻿using AsyncMediator;
 using AsyncMediatorEvents.Application.UseCases.Demo;
+using AsyncMediatorEvents.Infrastructure.RequestBusModel;
 
 namespace AsyncMediatorEvents.Cli.Presentation.ConsoleCommands;
 
 public class DemoConsoleCommand
 {
-    private readonly IMediator mediator;
+    private readonly IRequestBus requestBus;
 
-    public DemoConsoleCommand(IMediator mediator)
+    public DemoConsoleCommand(IRequestBus requestBus)
     {
-        this.mediator = mediator;
+        this.requestBus = requestBus;
     }
 
     public async Task Execute()
@@ -19,6 +20,6 @@ public class DemoConsoleCommand
             Message = "This DemoCommand is called by the main thread."
         };
 
-        await mediator.Send(command);
+        await requestBus.Send(command);
     }
 }

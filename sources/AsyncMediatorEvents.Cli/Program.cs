@@ -8,6 +8,8 @@ internal static class Program
 {
     private static async Task Main(string[] args)
     {
+        Console.WriteLine("For logs, check the debug console output.");
+
         IContainer container = SetupContainer();
         await ExecuteDemoUseCase(container);
     }

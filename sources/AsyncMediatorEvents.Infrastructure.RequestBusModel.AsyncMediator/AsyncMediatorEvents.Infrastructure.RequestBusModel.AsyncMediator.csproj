@@ -6,11 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AsyncMediator" Version="2.1.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" PrivateAssets="All" />
         <ProjectReference Include="..\AsyncMediatorEvents.Infrastructure.RequestBusModel\AsyncMediatorEvents.Infrastructure.RequestBusModel.csproj" PrivateAssets="All" />
     </ItemGroup>
 

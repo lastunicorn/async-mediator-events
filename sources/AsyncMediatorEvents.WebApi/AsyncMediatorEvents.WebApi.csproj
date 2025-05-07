@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" />
-    <ProjectReference Include="..\AsyncMediator.Extensions.DependencyInjection\AsyncMediator.Extensions.DependencyInjection.csproj" />
-    <ProjectReference Include="..\AsyncMediatorEvents.WebApi.Presentation\AsyncMediatorEvents.WebApi.Presentation.csproj" />
+    <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\AsyncMediator.Extensions.DependencyInjection\AsyncMediator.Extensions.DependencyInjection.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\AsyncMediatorEvents.WebApi.Presentation\AsyncMediatorEvents.WebApi.Presentation.csproj" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

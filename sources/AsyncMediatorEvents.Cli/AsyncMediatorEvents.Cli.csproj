@@ -12,9 +12,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" />
-        <ProjectReference Include="..\AsyncMediator.Extensions.Autofac\AsyncMediator.Extensions.Autofac.csproj" />
-        <ProjectReference Include="..\AsyncMediatorEvents.Cli.Presentation\AsyncMediatorEvents.Cli.Presentation.csproj" />
+        <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\AsyncMediator.Extensions.Autofac\AsyncMediator.Extensions.Autofac.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\AsyncMediatorEvents.Cli.Presentation\AsyncMediatorEvents.Cli.Presentation.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\AsyncMediatorEvents.Infrastructure.RequestBusModel.AsyncMediator\AsyncMediatorEvents.Infrastructure.RequestBusModel.AsyncMediator.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\AsyncMediatorEvents.Infrastructure.RequestBusModel\AsyncMediatorEvents.Infrastructure.RequestBusModel.csproj" PrivateAssets="All" />
     </ItemGroup>
 
 </Project>

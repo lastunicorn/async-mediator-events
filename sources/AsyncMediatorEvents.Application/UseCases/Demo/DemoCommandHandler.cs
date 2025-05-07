@@ -1,16 +1,17 @@
 ﻿using AsyncMediator;
 using AsyncMediatorEvents.Application.Events.Demo;
+using AsyncMediatorEvents.Infrastructure.RequestBusModel;
 using System.Diagnostics;
 
 namespace AsyncMediatorEvents.Application.UseCases.Demo;
 
 internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 {
-    private readonly IMediator mediator;
+    private readonly IEventBus eventBus;
 
-    public DemoCommandHandler(IMediator mediator)
+    public DemoCommandHandler(IEventBus eventBus)
     {
-        this.mediator = mediator;
+        this.eventBus = eventBus;
     }
 
     public Task<ICommandWorkflowResult> Handle(DemoCommand command)
@@ -42,6 +43,6 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
             Message = "This is an event raised by DemoCommand."
         };
 
-        mediator.DeferEvent(@event);
+        eventBus.DeferEvent(@event);
     }
 }

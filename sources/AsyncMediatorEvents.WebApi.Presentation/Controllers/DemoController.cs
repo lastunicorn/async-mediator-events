@@ -1,5 +1,6 @@
 ﻿using AsyncMediator;
 using AsyncMediatorEvents.Application.UseCases.Demo;
+using AsyncMediatorEvents.Infrastructure.RequestBusModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AsyncMediatorEvents.WebApi.Presentation.Controllers;
@@ -8,11 +9,11 @@ namespace AsyncMediatorEvents.WebApi.Presentation.Controllers;
 [ApiController]
 public class DemoController : ControllerBase
 {
-    private readonly IMediator mediator;
+    private readonly IRequestBus requestBus;
 
-    public DemoController(IMediator mediator)
+    public DemoController(IRequestBus requestBus)
     {
-        this.mediator = mediator;
+        this.requestBus = requestBus;
     }
 
     [HttpGet]
@@ -22,7 +23,7 @@ public class DemoController : ControllerBase
         {
             Message = message
         };
-        ICommandWorkflowResult result = await mediator.Send(command);
+        ICommandWorkflowResult result = await requestBus.Send(command);
 
         return Ok(result);
     }
