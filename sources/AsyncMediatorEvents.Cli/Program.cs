@@ -1,6 +1,5 @@
-﻿using AsyncMediator;
+﻿using AsyncMediatorEvents.Cli.Presentation.ConsoleCommands;
 using Autofac;
-using AsyncMediatorEvents.Cli.Presentation.ConsoleCommands;
 
 namespace AsyncMediatorEvents.Cli;
 
@@ -8,7 +7,7 @@ internal static class Program
 {
     private static async Task Main(string[] args)
     {
-        Console.WriteLine("For logs, check the debug console output.");
+        Console.WriteLine("For logs, check the debug output.");
 
         IContainer container = SetupContainer();
         await ExecuteDemoUseCase(container);
@@ -25,8 +24,5 @@ internal static class Program
     {
         DemoConsoleCommand consoleCommand = container.Resolve<DemoConsoleCommand>();
         await consoleCommand.Execute();
-
-        IMediator mediator = container.Resolve<IMediator>();
-        await mediator.ExecuteDeferredEvents();
     }
 }

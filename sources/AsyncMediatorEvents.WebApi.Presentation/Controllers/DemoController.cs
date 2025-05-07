@@ -25,6 +25,9 @@ public class DemoController : ControllerBase
         };
         ICommandWorkflowResult result = await requestBus.Send(command);
 
-        return Ok(result);
+        return result.Process<DemoResponse>(response =>
+        {
+            return Ok(response.Message);
+        });
     }
 }
