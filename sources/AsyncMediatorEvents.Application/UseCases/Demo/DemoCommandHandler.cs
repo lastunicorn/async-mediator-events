@@ -48,8 +48,3 @@ internal class DemoCommandHandler : CommandHandlerBase<DemoCommand>
         Mediator.DeferEvent(@event);
     }
 }
-
-public class DemoResponse
-{
-    public string Message { get; set; }
-}
