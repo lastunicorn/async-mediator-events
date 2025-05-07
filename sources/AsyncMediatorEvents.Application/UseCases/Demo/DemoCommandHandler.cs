@@ -11,7 +11,7 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 
     public DemoCommandHandler(IEventBus eventBus)
     {
-        this.eventBus = eventBus;
+        this.eventBus = eventBus ?? throw new ArgumentNullException(nameof(eventBus));
     }
 
     public Task<ICommandWorkflowResult> Handle(DemoCommand command)
@@ -50,9 +50,4 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 
         eventBus.DeferEvent(@event);
     }
-}
-
-public class DemoResponse
-{
-    public string Message { get; set; }
 }
