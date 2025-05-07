@@ -4,16 +4,14 @@ using System.Diagnostics;
 
 namespace AsyncMediatorEvents.Application.UseCases.Demo;
 
-internal class DemoCommandHandler : ICommandHandler<DemoCommand>
+internal class DemoCommandHandler : CommandHandlerBase<DemoCommand>
 {
-    private readonly IMediator mediator;
-
     public DemoCommandHandler(IMediator mediator)
+        : base(mediator)
     {
-        this.mediator = mediator;
     }
 
-    public Task<ICommandWorkflowResult> Handle(DemoCommand command)
+    protected override Task<ICommandWorkflowResult> DoHandle(DemoCommand command)
     {
         Debug.WriteLine($"[DemoCommandHandler] start");
 
@@ -47,7 +45,7 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
             Message = "This is an event raised by DemoCommand."
         };
 
-        mediator.DeferEvent(@event);
+        Mediator.DeferEvent(@event);
     }
 }
 
