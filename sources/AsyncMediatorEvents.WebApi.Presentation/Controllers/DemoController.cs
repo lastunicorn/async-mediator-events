@@ -24,6 +24,9 @@ public class DemoController : ControllerBase
         };
         ICommandWorkflowResult result = await mediator.Send(command);
 
-        return Ok(result);
+        return result.Process<DemoResponse>(response =>
+        {
+            return Ok(response.Message);
+        });
     }
 }

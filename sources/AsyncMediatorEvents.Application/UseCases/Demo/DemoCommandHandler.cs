@@ -15,18 +15,23 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 
     public Task<ICommandWorkflowResult> Handle(DemoCommand command)
     {
-        Debug.WriteLine($"[DemoCommandHandler] executing");
+        Debug.WriteLine($"[DemoCommandHandler] start");
 
         try
         {
             LogMessage(command);
             RaiseDemoEvent();
 
-            return Task.FromResult<ICommandWorkflowResult>(CommandWorkflowResult.Ok());
+            CommandWorkflowResult<DemoResponse> response = new(new DemoResponse
+            {
+                Message = "For logs, check the debug output."
+            });
+
+            return Task.FromResult<ICommandWorkflowResult>(response);
         }
         finally
         {
-            Debug.WriteLine($"[DemoCommandHandler] finished");
+            Debug.WriteLine($"[DemoCommandHandler] end");
         }
     }
 
@@ -44,4 +49,9 @@ internal class DemoCommandHandler : ICommandHandler<DemoCommand>
 
         mediator.DeferEvent(@event);
     }
+}
+
+public class DemoResponse
+{
+    public string Message { get; set; }
 }
