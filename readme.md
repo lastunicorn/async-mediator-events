@@ -20,3 +20,9 @@ Create a wrapper over the `IMediator` implementation which. We can call it `Requ
 ## Solution 2 - Base Classes
 
 Create base classes, one for commands and and one for queries, which will execute the delayed events at the end of the `Handle()` method execution.
+
+
+
+**Note**
+
+See different git branches for each solution.
