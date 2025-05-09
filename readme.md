@@ -8,14 +8,15 @@ AsyncMediator is a clone of MediatR. Here is the GitHub repo:
 
 The delayed events created using the `IMediator` are not executed at the end of the use case (command or query) execution.
 
-## Solution 1
+To execute the deferred events, the `IMediator.ExecuteDeferredEvents()` method must be called, but how to ensure its execution after each command or query?
 
-Create a wrapper over the `IMediator` implementation which will execute all the delayed events after the command/query is finished.
+## Solution 1 - Request Bus
 
-## Solution 2
+Create a wrapper over the `IMediator` implementation which. We can call it `RequestBus`. It will:
 
-Create base classes for a command and query which will execute all the delayed events after the command/query is finished.
+- send the requested command/query to the `IMediator` instance;
+- execute the delayed events by calling the `IMediator.ExecuteDeferredEvents()` method.
 
-## Solution 3
+## Solution 2 - Base Classes
 
-Create a "middleware" for the mediator to be executed after the 
+Create base classes, one for commands and and one for queries, which will execute the delayed events at the end of the `Handle()` method execution.
