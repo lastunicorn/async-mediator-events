@@ -9,12 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.Applica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.WebApi", "AsyncMediatorEvents.WebApi\AsyncMediatorEvents.WebApi.csproj", "{54FDA350-733F-4C4A-B7E4-24D07504FBBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediator.Extensions.Autofac", "AsyncMediator.Extensions.Autofac\AsyncMediator.Extensions.Autofac.csproj", "{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediator.Extensions.DependencyInjection", "AsyncMediator.Extensions.DependencyInjection\AsyncMediator.Extensions.DependencyInjection.csproj", "{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.WebApi.Presentation", "AsyncMediatorEvents.WebApi.Presentation\AsyncMediatorEvents.WebApi.Presentation.csproj", "{270FB960-A334-45B6-AED4-9F7B03523B15}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMediatorEvents.Cli.Presentation", "AsyncMediatorEvents.Cli.Presentation\AsyncMediatorEvents.Cli.Presentation.csproj", "{7CFA3B28-537A-4A23-87D9-498B5EBBF4CD}"
@@ -41,14 +35,6 @@ Global
 		{54FDA350-733F-4C4A-B7E4-24D07504FBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54FDA350-733F-4C4A-B7E4-24D07504FBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54FDA350-733F-4C4A-B7E4-24D07504FBBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{270FB960-A334-45B6-AED4-9F7B03523B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{270FB960-A334-45B6-AED4-9F7B03523B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{270FB960-A334-45B6-AED4-9F7B03523B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -64,8 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2CDA85C6-CC0A-4CC7-9D27-4AEBE4A8A8A4} = {186FD0EF-591E-4C71-9B50-D7EDC03D9887}
 		{54FDA350-733F-4C4A-B7E4-24D07504FBBD} = {8AE25B4A-9E5F-40D7-80A3-D6CDB6AAA304}
-		{E9734CD6-9CDC-4AB0-8F3D-2E56619B8B3A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{FBDFE6A0-A7F2-4CE8-BA90-97BAE1EBEDBE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{270FB960-A334-45B6-AED4-9F7B03523B15} = {8AE25B4A-9E5F-40D7-80A3-D6CDB6AAA304}
 		{7CFA3B28-537A-4A23-87D9-498B5EBBF4CD} = {186FD0EF-591E-4C71-9B50-D7EDC03D9887}
 	EndGlobalSection

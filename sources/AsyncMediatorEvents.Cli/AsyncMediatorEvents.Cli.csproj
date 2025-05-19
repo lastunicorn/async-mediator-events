@@ -8,12 +8,12 @@
 
     <ItemGroup>
         <PackageReference Include="AsyncMediator" Version="2.1.0" />
+        <PackageReference Include="AsyncMediator.Extensions.Autofac" Version="1.0.0" />
         <PackageReference Include="Autofac" Version="8.2.1" />
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\AsyncMediatorEvents.Application\AsyncMediatorEvents.Application.csproj" />
-        <ProjectReference Include="..\AsyncMediator.Extensions.Autofac\AsyncMediator.Extensions.Autofac.csproj" />
         <ProjectReference Include="..\AsyncMediatorEvents.Cli.Presentation\AsyncMediatorEvents.Cli.Presentation.csproj" />
     </ItemGroup>
 
